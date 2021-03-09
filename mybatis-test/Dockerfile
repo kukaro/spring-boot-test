@@ -20,7 +20,11 @@ RUN apt-get install -y curl
 RUN apt-get install -y telnet
 RUN apt-get install -y tree
 RUN apt-get install -y gradle
+RUN apt-get install -y maven
 RUN apt-get install -y net-tools #netstat
+
+#install mysql
+RUN apt-get install -y mysql-server
 
 #setting vim
 RUN git clone https://github.com/VundleVim/Vundle.vim.git
@@ -30,4 +34,4 @@ RUN mv Vundle.vim ${HOME}/.vim/bundle
 #script
 ADD ./script ${HOME}/script
 
-EXPOSE 8080
+EXPOSE 8080 3036

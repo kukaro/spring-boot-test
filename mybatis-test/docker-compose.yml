@@ -9,5 +9,7 @@ services:
       - ./:/root/project
     ports:
       - '18080:8080'
+      - '13036:3036'
     expose:
       - '18080'
+      - '13036'

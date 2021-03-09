@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 RELATIVE_DIR=`dirname "$0"`
 cd "$RELATIVE_DIR" && cd ..
-mvn clean
-mvn install
+docker exec -it myubuntu /bin/bash

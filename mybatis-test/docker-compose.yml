@@ -1,0 +1,13 @@
+version: '3.3'
+
+services:
+  myubuntu:
+    image: myubuntu
+    container_name: myubuntu
+    command: /root/script/build.sh
+    volumes:
+      - ./:/root/project
+    ports:
+      - '18080:8080'
+    expose:
+      - '18080'

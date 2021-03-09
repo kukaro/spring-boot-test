@@ -4,7 +4,7 @@ services:
   myubuntu:
     image: myubuntu
     container_name: myubuntu
-    command: /root/script/build.sh
+    command: /root/script/init.sh
     volumes:
       - ./:/root/project
     ports:

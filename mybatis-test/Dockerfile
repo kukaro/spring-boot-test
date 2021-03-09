@@ -33,5 +33,9 @@ RUN mv Vundle.vim ${HOME}/.vim/bundle
 
 #script
 ADD ./script ${HOME}/script
+ADD ./ ${HOME}/project
+RUN pwd ${HOME}/project
+RUN cd ${HOME}/project/ &&./mvnw clean
+RUN cd ${HOME}/project/ &&./mvnw install
 
 EXPOSE 8080 3036

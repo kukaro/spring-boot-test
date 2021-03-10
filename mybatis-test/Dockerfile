@@ -23,6 +23,9 @@ RUN apt-get install -y gradle
 RUN apt-get install -y maven
 RUN apt-get install -y net-tools #netstat
 
+#install apache
+RUN apt-get -y install apache2
+
 #install mysql
 RUN apt-get install -y mysql-server
 
@@ -38,4 +41,4 @@ RUN pwd ${HOME}/project
 RUN cd ${HOME}/project/ &&./mvnw clean
 RUN cd ${HOME}/project/ &&./mvnw install
 
-EXPOSE 8080 3036
+EXPOSE 80 8080 3036

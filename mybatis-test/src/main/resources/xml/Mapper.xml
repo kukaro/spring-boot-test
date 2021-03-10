@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="development-coeat">
+
+    <select id="selectPersonAll" resultType="com.example.coeat.dto.PersonDto">
+        select *
+        from person
+    </select>
+
+    <insert id="insertData" parameterType="com.example.coeat.dto.PersonDto">
+        insert into person(name, id)
+        values (#{name}, ${id})
+    </insert>
+
+    <update id="updateData" parameterType="com.example.coeat.dto.PersonDto">
+        update person
+        set name = #{name}
+        where no = #{no}
+    </update>
+
+    <delete id="deleteData" parameterType="com.example.coeat.dto.PersonDto">
+        delete
+        from person
+        where no = #{no}
+    </delete>
+</mapper>

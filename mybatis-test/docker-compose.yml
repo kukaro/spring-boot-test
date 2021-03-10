@@ -5,11 +5,13 @@ services:
     image: myubuntu
     container_name: myubuntu
     command: /root/script/init.sh
-    volumes:
-      - ./:/root/project
+#    volumes:
+#      - ./:/root/project
     ports:
+      - '10080:80'
       - '18080:8080'
       - '13036:3036'
     expose:
+      - '10080'
       - '18080'
       - '13036'

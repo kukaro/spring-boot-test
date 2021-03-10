@@ -5,4 +5,5 @@ cd "$RELATIVE_DIR" && cd ..
 mvn clean
 mvn install
 service mysql start
+mysql -uroot -proot < /root/project/sql/init.sql
 java -jar /root/project/target/coeat-0.0.1-SNAPSHOT.jar
